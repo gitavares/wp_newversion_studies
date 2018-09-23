@@ -48,8 +48,7 @@
         // Program Post Type
         register_post_type('program', array(
             'supports' => array(
-                'title', 
-                'editor'
+                'title'
             ),
             'rewrite' => array(
                 'slug' => 'programs'
