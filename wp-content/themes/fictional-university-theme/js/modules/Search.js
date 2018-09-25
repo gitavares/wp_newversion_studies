@@ -134,7 +134,7 @@ class Search {
     }
     
     keyPressDispatcher(e) {
-        if(e.keyCode == 83 && !this.isOverlayOpen && $("input, textarea").is(':focus')){ //S key
+        if(e.keyCode == 83 && !this.isOverlayOpen && $("input, textarea").is(':focus') && !(universityData.root_url + '/Amazing-University/my-notes/')){ //S key
             this.openOverlay()
         }
         
