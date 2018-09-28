@@ -19,17 +19,31 @@
  */
 
 // ** MySQL settings - You can get this info from your web host ** //
+if(file_exists(dirname(__FILE__) . '/local.php')){
+	// local db settings
+	define('DB_NAME', 'wp-university');
+	define('DB_USER', 'gitavares');
+	define('DB_PASSWORD', 'wp-password');
+	define('DB_HOST', 'localhost');
+} else {
+	// live db settings
+	define('DB_NAME', 'gisellet_universitydata');
+	define('DB_USER', 'gisellet_wp585');
+	define('DB_PASSWORD', 'wp-password');
+	define('DB_HOST', 'localhost');
+}
+
 /** The name of the database for WordPress */
-define('DB_NAME', 'wp-university');
+// define('DB_NAME', 'wp-university');
 
 /** MySQL database username */
-define('DB_USER', 'gitavares');
+// define('DB_USER', 'gitavares');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'wp-password');
+// define('DB_PASSWORD', 'wp-password');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+// define('DB_HOST', 'localhost');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
